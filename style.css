@@ -1,0 +1,271 @@
+/* variáveis */
+/* importa fontes titulo */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --gradiente-azul: linear-gradient(90deg, #90dfe2, #0a2958);
+    --verde-agua-claro: #defaf3;
+    --azul-escuro: #0a2958;
+    --verde-agua: #90dfe2;
+    --off-white: #eaeaea;
+    --grafite: #575a5f;
+    --sombra: #90dfe2;
+    --fonte-titulo: "Sora", sans-serif;
+    --fonte-corpo: "Montserrat", sans-serif;
+}
+
+/* variáveis de tag - base */
+header {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    font-family: var(--fonte-corpo);
+}
+
+main {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-shadow: var(--sombra) 1px 1px 1px;
+}
+
+header a {
+    color: white;
+    padding: 1em;
+}
+dl,
+ul,
+ol,
+p {
+    padding-left: 1em;
+}
+
+li {
+    display: flex;
+    padding: 5px;
+}
+
+footer {
+    align-items: center;
+    text-align: center;
+    color: var(--off-white);
+    background: var(--gradiente-azul);
+    padding: 2em 0;
+}
+
+/* VARIÁVEIS DE CLASSES */
+
+.secao-mobile {
+    display: none;
+}
+
+.secao-2 {
+    max-width: 55%;
+}
+
+.titulo-topico {
+    background: var(--gradiente-azul);
+    color: white;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.links-topo {
+    margin: 1em;
+    text-align: center;
+}
+
+/* icone seção1 */
+.icone {
+    padding-right: 5px;
+}
+
+/* icone footer */
+.icone-footer {
+    filter: invert(1) sepia(1) saturate(1) hue-rotate(200deg);
+    padding: 0 10px;
+}
+
+.btn-top {
+    background: var(--azul-escuro);
+    color: white;
+    display: inline-block;
+    border-radius: 100px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 0.5em;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.btn-top:hover {
+    background: var(--gradiente-azul);
+    color: var(--off-white);
+}
+
+.img-perfil {
+    margin: auto 2em 1em auto;
+    max-width: 300px;
+    background: var(--gradiente-azul);
+    color: white;
+    padding: 0px 0px 0px 60px;
+    border-radius: 15px 300px 300px 15px;
+    box-shadow: 5px 5px 10px rgba(85, 56, 56, 0.3);
+}
+
+.linha-vertical {
+    max-height: 300px;
+    margin-bottom: 2.5em;
+}
+
+.div-linha-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle {
+    font-family: var(--fonte-corpo);
+    font-weight: 600;
+}
+
+
+li span {
+    font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 24px;
+        letter-spacing: 5px;
+    }
+
+    h2,
+    h3,
+    h4 {
+        padding: 0 25px;
+        margin: 10px 0;
+    }
+
+    h2,
+    h3 {
+        font-size: 16px;
+        ;
+    }
+
+    h4 {
+        font-size: 14px;
+        ;
+    }
+
+
+    .titulo-topico {
+        border-radius: 0 50px 50px 0;
+        font-size: 16px;
+        padding: 0.75em 0.75em 0.75em 2em;
+    }
+
+    dl,
+    ul,
+    ol,
+    p {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    li {
+        padding-left: 25px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+
+
+    .secao-mobile {
+        display: flex;
+        text-align: justify;
+        padding: 0 15px;
+
+    }
+
+    .subtopico {
+        padding: 0 10px;
+    }
+
+    #secao-contato,
+    #formacao,
+    #experiencia,
+    #competencias,
+    #projetos {
+        width: 100vw;
+        padding: 5px 0px;
+
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+    #sobre-mim {
+        display: none;
+    }
+
+    .links-topo {
+        display: none;
+    }
+
+    .titulo-topico {
+        text-align: center;
+        margin-right: 25px;
+    }
+
+    .div-linha-vertical {
+        display: none;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
